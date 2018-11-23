@@ -344,8 +344,7 @@ img {
   #floorLeft .nav {
     margin-top: 18px;
     width: 200px;
-    height: auto;
-    background: url(./../images/aboutNav.png) no-repeat 34px 10px; }
+    height: auto; }
     #floorLeft .nav li {
       height: auto;
       line-height: 45px;
