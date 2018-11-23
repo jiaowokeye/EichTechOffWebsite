@@ -1,0 +1,79 @@
+$red : #bd164e;
+.red{
+  color:$red!important;
+}
+
+
+@mixin singleEllipsis{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+@mixin flexParent{
+  display: box; 
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flexChide($value:1){
+  -webkit-box-flex: $value ;
+  -moz-box-flex: $value;
+  -ms-flex: $value ;
+  width:20%;
+  -webkit-flex: $value;
+  flex: $value;
+}
+@mixin transition($value : 2s){
+  transition: all $value ;
+  -moz-transition: all $value;
+  -webkit-transition: all $value ;
+  -o-transition: all $value;
+}
+@mixin rotate($deg:0){
+  transform:rotate($deg);
+  -ms-transform:rotate($deg);
+  -moz-transform:rotate($deg);
+  -webkit-transform:rotate($deg);
+  -o-transform:rotate($deg);
+}
+@mixin opacity($value:1){
+  filter:alpha(opacity=$value*100);
+  -moz-opacity:$value;
+  -khtml-opacity: $value;
+  opacity: $value;
+}
+
+
+@mixin wrap{
+  width:100%;
+  min-width: 1220px;
+}
+@mixin content{
+  width:1220px;
+  margin: 0 auto;
+}
+@mixin absolute($top:'',$left:'',$bottom:'',$right:''){
+  position: absolute;
+  top:$top;
+  left:$left;
+  bottom: $bottom;
+  right:$right;
+}
+@mixin backgroundTo($from,$to){
+  background: $from; /* Old browsers */
+  background: -moz-linear-gradient(left, $from 0%,  $to 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, $from 0%$to 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, $from 0%,$to 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 ); /* IE6-9 */
+}
+@mixin gradient($from,$to){
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff670f+0,ff670f+99 */
+border-image: $from; /* Old browsers */
+border-image: -moz-linear-gradient(-45deg,$from , $to); /* FF3.6-15 */
+border-image: -webkit-linear-gradient(-45deg, $from,$to 99%); /* Chrome10-25,Safari5.1-6 */
+border-image: linear-gradient(135deg, $from,$to 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

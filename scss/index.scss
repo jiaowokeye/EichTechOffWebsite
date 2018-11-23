@@ -1,0 +1,24 @@
+@import "public";
+#banner-wrap{
+  margin-top:80px;
+  @include wrap;
+  background-color:#1051ad;
+  #banner{
+    @include content;
+	img{
+		width: 100%;
+	}	
+  }
+}
+
+#content-wrap{
+  @include wrap;
+  #content{
+    @include content;
+	padding: 36px 0;
+    font-size: 16px;
+    line-height: 28px;
+    color: #666874;
+    text-indent: 32px;
+  }
+}
